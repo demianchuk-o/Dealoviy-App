@@ -1,0 +1,25 @@
+/* Layout max-size breakpoints */
+.max-width-xs {
+  max-width: 599px !important; /* Just below the 'sm' breakpoint */
+}
+
+.max-width-sm {
+  max-width: 600px !important; /* Just below the 'md' breakpoint */
+}
+
+.max-width-md {
+  max-width: 960px !important; /* Just below the 'lg' breakpoint */
+}
+
+.max-width-lg {
+  max-width: 1280px !important; /* Just below the 'xl' breakpoint */
+}
+
+.max-width-xl {
+  max-width: 1920px !important; /* Just below the 'xxl' breakpoint */
+}
+/* Layout max-size breakpoints */
+
+.cursor-pointer {
+  cursor: pointer;
+}

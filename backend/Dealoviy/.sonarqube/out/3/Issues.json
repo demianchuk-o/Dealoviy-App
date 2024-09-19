@@ -1,0 +1,229 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.3.0.0",
+        "fileVersion": "4.3.1-3.22505.12 (95493021)",
+        "semanticVersion": "4.3.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'value' in 'Claim.Claim(string type, string value)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/KPI/Labs_5sem/Dealovyi/pa-demyanchuk-ole/backend/Dealoviy/Dealoviy.Infrastructure/Authentication/Tokens/JwtTokenGenerator.cs",
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 57,
+                  "endLine": 41,
+                  "endColumn": 92
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'path1' in 'string Path.Combine(string path1, string path2, string path3)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/KPI/Labs_5sem/Dealovyi/pa-demyanchuk-ole/backend/Dealoviy/Dealoviy.Infrastructure/Persistence/FilePathBuilder.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 29,
+                  "endLine": 15,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'name' in 'Region Region.Create(string name)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/KPI/Labs_5sem/Dealovyi/pa-demyanchuk-ole/backend/Dealoviy/Dealoviy.Infrastructure/Persistence/ModelBuilderExtensions.cs",
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 40,
+                  "endLine": 37,
+                  "endColumn": 50
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'name' in 'City City.Create(string name, Guid regionId)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/KPI/Labs_5sem/Dealovyi/pa-demyanchuk-ole/backend/Dealoviy/Dealoviy.Infrastructure/Persistence/ModelBuilderExtensions.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 36,
+                  "endLine": 43,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'order' to 'request' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/KPI/Labs_5sem/Dealovyi/pa-demyanchuk-ole/backend/Dealoviy/Dealoviy.Infrastructure/Persistence/Repositories/OrderRepository.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 38,
+                  "endLine": 14,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2053",
+          "level": "warning",
+          "message": "Make this salt unpredictable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/KPI/Labs_5sem/Dealovyi/pa-demyanchuk-ole/backend/Dealoviy/Dealoviy.Infrastructure/Authentication/Security/PasswordHasher.cs",
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 55,
+                  "endLine": 41,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "Member 'ConfigureUsersTable' does not access instance data and can be marked as static",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/KPI/Labs_5sem/Dealovyi/pa-demyanchuk-ole/backend/Dealoviy/Dealoviy.Infrastructure/Configuration/UserConfigurations.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 18,
+                  "endLine": 15,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CA1822": {
+          "id": "CA1822",
+          "shortDescription": "Mark members as static",
+          "fullDescription": "Members that do not access instance data or call instance methods can be marked as static. After you mark the methods as static, the compiler will emit nonvirtual call sites to these members. This can give you a measurable performance gain for performance-sensitive code.",
+          "defaultLevel": "note",
+          "helpUri": "https://docs.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1822",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS8604": {
+          "id": "CS8604",
+          "shortDescription": "Possible null reference argument.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8604)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S2053": {
+          "id": "S2053",
+          "shortDescription": "Hashes should include an unpredictable salt",
+          "fullDescription": "This vulnerability increases the likelihood that attackers are able to compute the cleartext of password hashes.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2053",
+          "properties": {
+            "category": "Critical Vulnerability",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S927": {
+          "id": "S927",
+          "shortDescription": "Parameter names should match base declaration and other partial definitions",
+          "fullDescription": "Parameters are part of the method signature and its identity.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-927",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
